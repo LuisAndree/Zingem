@@ -2,6 +2,10 @@ footer {
     color: var(--text-color-secondary);
     font-weight: var(--fw-md);
 
+    & .container {
+        padding-inline: 3rem;
+    }
+
     & .container,
     & .top {
         gap: 3rem;
@@ -31,6 +35,25 @@ footer {
 
         & span {
             font-size: .875rem;
+        }
+    }
+
+    @media (width >=80em) {
+        .container {
+            padding-inline: 0;
+            padding-bottom: 2rem;
+        }
+
+        & .top {
+            grid-template-columns: auto 1fr;
+
+            & nav {
+                margin-left: auto;
+
+                & ul {
+                    width: 14rem;
+                }
+            }
         }
     }
 }
